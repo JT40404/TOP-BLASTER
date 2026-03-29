@@ -13,13 +13,24 @@
       background: #0a0a0a;
       color: #00ff9d;
       font-family: 'VT323', monospace;
+      background-image: url('https://i.ibb.co/93ttcKMd/image-5.jpg');
+      background-size: cover;
+      background-position: center;
+      background-attachment: fixed;
+    }
+
+    .overlay {
+      background: rgba(10, 10, 10, 0.85);
+      min-height: 100vh;
     }
 
     .header {
-      background: linear-gradient(to bottom, #000, #1a1a1a);
+      background: linear-gradient(to bottom, rgba(0,0,0,0.9), rgba(26,26,26,0.9));
       border-bottom: 5px solid #00ff9d;
       padding: 20px 0;
       text-align: center;
+      position: relative;
+      z-index: 10;
     }
 
     .title {
@@ -38,17 +49,15 @@
 
     .hero {
       height: 82vh;
-      background: linear-gradient(rgba(0,0,0,0.75), rgba(0,0,0,0.9)), 
-                  url('https://i.ibb.co/bRm5Y5Vj/image-8.jpg') center/cover no-repeat;
       display: flex;
       align-items: center;
       justify-content: center;
       text-align: center;
       position: relative;
+      z-index: 5;
     }
 
     .hero-content {
-      z-index: 2;
       max-width: 950px;
       padding: 20px;
     }
@@ -62,6 +71,7 @@
     .hero p {
       font-size: 2.1rem;
       margin-bottom: 50px;
+      text-shadow: 0 0 20px #000;
     }
 
     .blast-button {
@@ -84,8 +94,10 @@
 
     .comics-section {
       padding: 70px 20px;
-      background: #111;
+      background: rgba(17, 17, 17, 0.95);
       text-align: center;
+      position: relative;
+      z-index: 5;
     }
 
     .comics-section h2 {
@@ -115,12 +127,14 @@
     }
 
     .status-bar {
-      background: #1a1a1a;
+      background: rgba(26, 26, 26, 0.95);
       padding: 40px 20px;
       font-size: 2rem;
       text-align: center;
       border-top: 5px solid #00ff9d;
       border-bottom: 5px solid #00ff9d;
+      position: relative;
+      z-index: 5;
     }
 
     .neon {
@@ -135,49 +149,55 @@
     .footer {
       padding: 50px 20px;
       text-align: center;
-      color: #666;
+      color: #888;
       font-size: 1.4rem;
+      position: relative;
+      z-index: 5;
     }
   </style>
 </head>
 <body>
 
-  <div class="header">
-    <h1 class="title">TOP BLASTER</h1>
-    <p class="subtitle">GREEN CANDLE DEFENSE PROTOCOL</p>
-  </div>
+  <div class="overlay">
 
-  <!-- Hero Section -->
-  <div class="hero">
-    <div class="hero-content">
-      <h1>TOP BLASTER IS ACTIVE</h1>
-      <p>Every buy detected.<br>Every jeet denied.<br>Every green candle secured.</p>
-      <button class="blast-button" onclick="executeTopBlast()">EXECUTE TOP BLAST</button>
+    <div class="header">
+      <h1 class="title">TOP BLASTER</h1>
+      <p class="subtitle">GREEN CANDLE DEFENSE PROTOCOL</p>
     </div>
-  </div>
 
-  <!-- Berserk Comics Section -->
-  <div class="comics-section">
-    <h2>BERSERK PROTOCOL • JEET EXTERMINATION LOGS</h2>
-    <div class="comic-container">
-      <img src="https://i.ibb.co/k2qFjBxD/image-12.jpg" alt="Top Blaster Berserk Comic 1" class="comic">
-      <img src="https://i.ibb.co/Q7kLVWQT/image-13.jpg" alt="Top Blaster Berserk Comic 2" class="comic">
-      <img src="https://i.ibb.co/1t5xR8Tk/image-14.jpg" alt="Top Blaster Berserk Comic 3" class="comic">
-      <img src="https://i.ibb.co/BHjsG2tN/image-15.jpg" alt="Top Blaster Berserk Comic 4" class="comic">
-      <img src="https://i.ibb.co/MypBTqDw/image-10.jpg" alt="Top Blaster Berserk Comic 5" class="comic">
+    <!-- Hero Section -->
+    <div class="hero">
+      <div class="hero-content">
+        <h1>TOP BLASTER IS ACTIVE</h1>
+        <p>Every buy detected.<br>Every jeet denied.<br>Every green candle secured.</p>
+        <button class="blast-button" onclick="executeTopBlast()">EXECUTE TOP BLAST</button>
+      </div>
     </div>
-  </div>
 
-  <!-- Status Bar -->
-  <div class="status-bar">
-    <p class="neon">✅ Successfully detected and executed top blast</p>
-    <p style="margin-top: 20px; font-size: 2.2rem;">
-      0.0001 SOL deployed • Green candles incoming
-    </p>
-  </div>
+    <!-- Comics Section -->
+    <div class="comics-section">
+      <h2>BERSERK PROTOCOL • JEET EXTERMINATION LOGS</h2>
+      <div class="comic-container">
+        <img src="https://i.ibb.co/k2qFjBxD/image-12.jpg" alt="Top Blaster Berserk Comic 1" class="comic">
+        <img src="https://i.ibb.co/Q7kLVWQT/image-13.jpg" alt="Top Blaster Berserk Comic 2" class="comic">
+        <img src="https://i.ibb.co/1t5xR8Tk/image-14.jpg" alt="Top Blaster Berserk Comic 3" class="comic">
+        <img src="https://i.ibb.co/BHjsG2tN/image-15.jpg" alt="Top Blaster Berserk Comic 4" class="comic">
+        <img src="https://i.ibb.co/MypBTqDw/image-10.jpg" alt="Top Blaster Berserk Comic 5" class="comic">
+      </div>
+    </div>
 
-  <div class="footer">
-    <p>TOP BLASTER v1.2 • Berserk Protocol Active • Never let the jeets win</p>
+    <!-- Status Bar -->
+    <div class="status-bar">
+      <p class="neon">✅ Successfully detected and executed top blast</p>
+      <p style="margin-top: 20px; font-size: 2.2rem;">
+        0.0001 SOL deployed • Green candles incoming
+      </p>
+    </div>
+
+    <div class="footer">
+      <p>TOP BLASTER v1.2 • Berserk Protocol Active • Never let the jeets win</p>
+    </div>
+
   </div>
 
   <script>
@@ -193,9 +213,10 @@
       const msg = messages[Math.floor(Math.random() * messages.length)];
       alert(msg + "\n\nTop Blaster has spoken.");
       
-      document.body.style.transition = "background 0.6s";
-      document.body.style.background = "#002211";
-      setTimeout(() => document.body.style.background = "#0a0a0a", 700);
+      // Flash effect
+      document.body.style.transition = "filter 0.6s";
+      document.body.style.filter = "brightness(1.4)";
+      setTimeout(() => document.body.style.filter = "none", 700);
     }
   </script>
 
