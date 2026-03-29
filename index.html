@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TOP BLASTER • Green Candle Defense</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&family=VT323&display=swap');
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      background: #0a0a0a;
+      color: #00ff9d;
+      font-family: 'VT323', monospace;
+      line-height: 1.4;
+    }
+
+    .header {
+      background: linear-gradient(to bottom, #000, #1a1a1a);
+      border-bottom: 5px solid #00ff9d;
+      padding: 20px 0;
+      text-align: center;
+    }
+
+    .title {
+      font-family: 'Press Start 2P', cursive;
+      font-size: 3.8rem;
+      color: #00ff9d;
+      text-shadow: 0 0 25px #00ff9d, 0 0 50px #00ff9d;
+      letter-spacing: 3px;
+    }
+
+    .subtitle {
+      font-size: 1.7rem;
+      color: #ff00aa;
+      text-shadow: 0 0 15px #ff00aa;
+    }
+
+    .hero {
+      height: 82vh;
+      background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.85)), 
+                  url('https://i.imgur.com/PnRc4.png') center/cover no-repeat;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      position: relative;
+    }
+
+    .hero-content {
+      z-index: 2;
+      max-width: 950px;
+      padding: 20px;
+    }
+
+    .hero h1 {
+      font-size: 4.5rem;
+      margin-bottom: 20px;
+      text-shadow: 0 0 35px #00ff9d;
+    }
+
+    .hero p {
+      font-size: 2.1rem;
+      margin-bottom: 50px;
+    }
+
+    .blast-button {
+      padding: 22px 70px;
+      font-size: 2.1rem;
+      font-family: 'Press Start 2P', cursive;
+      background: transparent;
+      color: #00ff9d;
+      border: 6px solid #00ff9d;
+      cursor: pointer;
+      transition: all 0.4s;
+      box-shadow: 0 0 45px #00ff9d;
+    }
+
+    .blast-button:hover {
+      background: #00ff9d;
+      color: #000;
+      transform: scale(1.1);
+    }
+
+    .comics-section {
+      padding: 70px 20px;
+      background: #111;
+      text-align: center;
+    }
+
+    .comics-section h2 {
+      font-size: 3rem;
+      margin-bottom: 40px;
+      color: #00ff9d;
+    }
+
+    .comic-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 40px;
+      max-width: 1400px;
+      margin: 0 auto;
+    }
+
+    .comic {
+      max-width: 620px;
+      border: 6px solid #00ff9d;
+      box-shadow: 0 0 50px rgba(0, 255, 157, 0.5);
+      transition: transform 0.3s;
+    }
+
+    .comic:hover {
+      transform: scale(1.03);
+    }
+
+    .status-bar {
+      background: #1a1a1a;
+      padding: 40px 20px;
+      font-size: 2rem;
+      text-align: center;
+      border-top: 5px solid #00ff9d;
+      border-bottom: 5px solid #00ff9d;
+    }
+
+    .neon {
+      animation: neon 1.8s infinite alternate;
+    }
+
+    @keyframes neon {
+      from { text-shadow: 0 0 10px #00ff9d; }
+      to { text-shadow: 0 0 40px #00ff9d, 0 0 70px #00ff9d; }
+    }
+
+    .footer {
+      padding: 50px 20px;
+      text-align: center;
+      color: #666;
+      font-size: 1.4rem;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="header">
+    <h1 class="title">TOP BLASTER</h1>
+    <p class="subtitle">GREEN CANDLE DEFENSE PROTOCOL</p>
+  </div>
+
+  <!-- Hero Section -->
+  <div class="hero">
+    <div class="hero-content">
+      <h1>TOP BLASTER IS ACTIVE</h1>
+      <p>Every buy detected.<br>Every jeet denied.<br>Every green candle secured.</p>
+      <button class="blast-button" onclick="executeTopBlast()">EXECUTE TOP BLAST</button>
+    </div>
+  </div>
+
+  <!-- Comics Section -->
+  <div class="comics-section">
+    <h2>MISSION LOGS</h2>
+    <div class="comic-container">
+      <!-- First Comic -->
+      <img src="https://i.imgur.com/fYbPg.png" alt="Top Blaster Comic 1" class="comic">
+
+      <!-- Second Comic -->
+      <img src="https://i.imgur.com/nwFu7.png" alt="Top Blaster Comic 2" class="comic">
+    </div>
+  </div>
+
+  <!-- Status Bar -->
+  <div class="status-bar">
+    <p class="neon">✅ Successfully detected and executed top blast</p>
+    <p style="margin-top: 20px; font-size: 2.2rem;">
+      0.0001 SOL deployed • Green candles incoming
+    </p>
+  </div>
+
+  <div class="footer">
+    <p>TOP BLASTER v1.1 • Built for relentless green candle defense</p>
+    <p>Keep the Instant Buy panel open • Never let the jeets win</p>
+  </div>
+
+  <script>
+    function executeTopBlast() {
+      const messages = [
+        "🔥 TOP BLAST ACTIVATED!",
+        "🌿 GREEN CANDLES DEPLOYED!",
+        "💀 JEETS NEUTRALIZED!",
+        "0.0001 SOL JUST HIT THE CHART!",
+        "ALL GREEN CANDLES SECURED!"
+      ];
+      
+      const msg = messages[Math.floor(Math.random() * messages.length)];
+      alert(msg + "\n\nTop Blaster has spoken.");
+      
+      // Quick flash effect
+      document.body.style.transition = "background 0.6s";
+      document.body.style.background = "#002211";
+      setTimeout(() => {
+        document.body.style.background = "#0a0a0a";
+      }, 700);
+    }
+  </script>
+
+</body>
+</html>
