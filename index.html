@@ -20,14 +20,14 @@
     }
 
     .overlay {
-      background: rgba(10, 10, 10, 0.85);
+      background: rgba(10, 10, 10, 0.88);
       min-height: 100vh;
     }
 
     .header {
-      background: linear-gradient(to bottom, rgba(0,0,0,0.9), rgba(26,26,26,0.9));
+      background: linear-gradient(to bottom, rgba(0,0,0,0.95), rgba(26,26,26,0.95));
       border-bottom: 5px solid #00ff9d;
-      padding: 20px 0;
+      padding: 25px 0;
       text-align: center;
       position: relative;
       z-index: 10;
@@ -35,20 +35,21 @@
 
     .title {
       font-family: 'Press Start 2P', cursive;
-      font-size: 3.8rem;
+      font-size: 4rem;
       color: #00ff9d;
       text-shadow: 0 0 25px #00ff9d, 0 0 50px #00ff9d;
-      letter-spacing: 3px;
+      letter-spacing: 4px;
     }
 
     .subtitle {
-      font-size: 1.7rem;
+      font-size: 1.8rem;
       color: #ff00aa;
       text-shadow: 0 0 15px #ff00aa;
+      margin-top: 8px;
     }
 
     .hero {
-      height: 82vh;
+      height: 75vh;
       display: flex;
       align-items: center;
       justify-content: center;
@@ -58,42 +59,24 @@
     }
 
     .hero-content {
-      max-width: 950px;
+      max-width: 1000px;
       padding: 20px;
     }
 
     .hero h1 {
-      font-size: 4.5rem;
-      margin-bottom: 20px;
-      text-shadow: 0 0 35px #00ff9d;
+      font-size: 4.8rem;
+      margin-bottom: 25px;
+      text-shadow: 0 0 40px #00ff9d;
     }
 
     .hero p {
-      font-size: 2.1rem;
-      margin-bottom: 50px;
+      font-size: 2.2rem;
+      margin-bottom: 40px;
       text-shadow: 0 0 20px #000;
     }
 
-    .blast-button {
-      padding: 22px 70px;
-      font-size: 2.1rem;
-      font-family: 'Press Start 2P', cursive;
-      background: transparent;
-      color: #00ff9d;
-      border: 6px solid #00ff9d;
-      cursor: pointer;
-      transition: all 0.4s;
-      box-shadow: 0 0 45px #00ff9d;
-    }
-
-    .blast-button:hover {
-      background: #00ff9d;
-      color: #000;
-      transform: scale(1.1);
-    }
-
     .comics-section {
-      padding: 70px 20px;
+      padding: 80px 20px;
       background: rgba(17, 17, 17, 0.95);
       text-align: center;
       position: relative;
@@ -102,7 +85,7 @@
 
     .comics-section h2 {
       font-size: 3rem;
-      margin-bottom: 40px;
+      margin-bottom: 45px;
       color: #00ff9d;
     }
 
@@ -110,7 +93,7 @@
       display: flex;
       flex-wrap: wrap;
       justify-content: center;
-      gap: 35px;
+      gap: 40px;
       max-width: 1600px;
       margin: 0 auto;
     }
@@ -119,17 +102,46 @@
       max-width: 580px;
       border: 6px solid #00ff9d;
       box-shadow: 0 0 50px rgba(0, 255, 157, 0.6);
+    }
+
+    .gallery-section {
+      padding: 90px 20px;
+      background: rgba(10, 10, 10, 0.95);
+      text-align: center;
+      position: relative;
+      z-index: 5;
+    }
+
+    .gallery-section h2 {
+      font-size: 3rem;
+      margin-bottom: 50px;
+      color: #00ff9d;
+    }
+
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 25px;
+      max-width: 1400px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+
+    .gallery-img {
+      width: 100%;
+      border: 5px solid #00ff9d;
+      box-shadow: 0 0 35px rgba(0, 255, 157, 0.5);
       transition: transform 0.3s;
     }
 
-    .comic:hover {
-      transform: scale(1.04);
+    .gallery-img:hover {
+      transform: scale(1.05);
     }
 
     .status-bar {
       background: rgba(26, 26, 26, 0.95);
-      padding: 40px 20px;
-      font-size: 2rem;
+      padding: 45px 20px;
+      font-size: 2.1rem;
       text-align: center;
       border-top: 5px solid #00ff9d;
       border-bottom: 5px solid #00ff9d;
@@ -147,7 +159,7 @@
     }
 
     .footer {
-      padding: 50px 20px;
+      padding: 60px 20px;
       text-align: center;
       color: #888;
       font-size: 1.4rem;
@@ -170,19 +182,33 @@
       <div class="hero-content">
         <h1>TOP BLASTER IS ACTIVE</h1>
         <p>Every buy detected.<br>Every jeet denied.<br>Every green candle secured.</p>
-        <button class="blast-button" onclick="executeTopBlast()">EXECUTE TOP BLAST</button>
       </div>
     </div>
 
-    <!-- Comics Section -->
+    <!-- Berserk Comics Section -->
     <div class="comics-section">
       <h2>BERSERK PROTOCOL • JEET EXTERMINATION LOGS</h2>
       <div class="comic-container">
-        <img src="https://i.ibb.co/k2qFjBxD/image-12.jpg" alt="Top Blaster Berserk Comic 1" class="comic">
-        <img src="https://i.ibb.co/Q7kLVWQT/image-13.jpg" alt="Top Blaster Berserk Comic 2" class="comic">
-        <img src="https://i.ibb.co/1t5xR8Tk/image-14.jpg" alt="Top Blaster Berserk Comic 3" class="comic">
-        <img src="https://i.ibb.co/BHjsG2tN/image-15.jpg" alt="Top Blaster Berserk Comic 4" class="comic">
-        <img src="https://i.ibb.co/MypBTqDw/image-10.jpg" alt="Top Blaster Berserk Comic 5" class="comic">
+        <img src="https://i.ibb.co/k2qFjBxD/image-12.jpg" alt="Comic 1" class="comic">
+        <img src="https://i.ibb.co/Q7kLVWQT/image-13.jpg" alt="Comic 2" class="comic">
+        <img src="https://i.ibb.co/1t5xR8Tk/image-14.jpg" alt="Comic 3" class="comic">
+        <img src="https://i.ibb.co/BHjsG2tN/image-15.jpg" alt="Comic 4" class="comic">
+        <img src="https://i.ibb.co/MypBTqDw/image-10.jpg" alt="Comic 5" class="comic">
+      </div>
+    </div>
+
+    <!-- Gallery Section -->
+    <div id="gallery" class="gallery-section">
+      <h2>TOP BLASTER ART GALLERY</h2>
+      <div class="gallery-grid">
+        <img src="https://i.ibb.co/Tx4n0s1m/image-1.jpg" alt="Top Blaster Art 1" class="gallery-img">
+        <img src="https://i.ibb.co/Cg03DSy/image-2.jpg" alt="Top Blaster Art 2" class="gallery-img">
+        <img src="https://i.ibb.co/8LkNkmwC/image-3.jpg" alt="Top Blaster Art 3" class="gallery-img">
+        <img src="https://i.ibb.co/jZ4XrdJs/image-4.jpg" alt="Top Blaster Art 4" class="gallery-img">
+        <img src="https://i.ibb.co/93ttcKMd/image-5.jpg" alt="Top Blaster Art 5" class="gallery-img">
+        <img src="https://i.ibb.co/5gLpd7gN/image-6.jpg" alt="Top Blaster Art 6" class="gallery-img">
+        <img src="https://i.ibb.co/ccxLHrLJ/image-7.jpg" alt="Top Blaster Art 7" class="gallery-img">
+        <img src="https://i.ibb.co/P29Z8QR/image-11.jpg" alt="Top Blaster Art 8" class="gallery-img">
       </div>
     </div>
 
@@ -199,26 +225,6 @@
     </div>
 
   </div>
-
-  <script>
-    function executeTopBlast() {
-      const messages = [
-        "🔥 TOP BLAST ACTIVATED!",
-        "🌿 GREEN CANDLES DEPLOYED!",
-        "💀 JEET HORDE NEUTRALIZED!",
-        "0.0001 SOL JUST HIT THE CHART!",
-        "ALL GREEN CANDLES SECURED!"
-      ];
-      
-      const msg = messages[Math.floor(Math.random() * messages.length)];
-      alert(msg + "\n\nTop Blaster has spoken.");
-      
-      // Flash effect
-      document.body.style.transition = "filter 0.6s";
-      document.body.style.filter = "brightness(1.4)";
-      setTimeout(() => document.body.style.filter = "none", 700);
-    }
-  </script>
 
 </body>
 </html>
