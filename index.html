@@ -13,7 +13,6 @@
       background: #0a0a0a;
       color: #00ff9d;
       font-family: 'VT323', monospace;
-      line-height: 1.4;
     }
 
     .header {
@@ -39,8 +38,8 @@
 
     .hero {
       height: 82vh;
-      background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.85)), 
-                  url('https://i.imgur.com/PnRc4.png') center/cover no-repeat;
+      background: linear-gradient(rgba(0,0,0,0.75), rgba(0,0,0,0.9)), 
+                  url('https://i.ibb.co/bRm5Y5Vj/image-8.jpg') center/cover no-repeat;
       display: flex;
       align-items: center;
       justify-content: center;
@@ -161,11 +160,11 @@
   <div class="comics-section">
     <h2>MISSION LOGS</h2>
     <div class="comic-container">
-      <!-- First Comic -->
-      <img src="https://i.imgur.com/fYbPg.png" alt="Top Blaster Comic 1" class="comic">
+      <!-- Comic 1 -->
+      <img src="https://i.ibb.co/bRm5Y5Vj/image-8.jpg" alt="Top Blaster Comic 1" class="comic">
 
-      <!-- Second Comic -->
-      <img src="https://i.imgur.com/nwFu7.png" alt="Top Blaster Comic 2" class="comic">
+      <!-- Comic 2 -->
+      <img src="https://i.ibb.co/rRQj106X/image-9.jpg" alt="Top Blaster Comic 2" class="comic">
     </div>
   </div>
 
@@ -195,12 +194,10 @@
       const msg = messages[Math.floor(Math.random() * messages.length)];
       alert(msg + "\n\nTop Blaster has spoken.");
       
-      // Quick flash effect
+      // Flash effect
       document.body.style.transition = "background 0.6s";
       document.body.style.background = "#002211";
-      setTimeout(() => {
-        document.body.style.background = "#0a0a0a";
-      }, 700);
+      setTimeout(() => document.body.style.background = "#0a0a0a", 700);
     }
   </script>
 
