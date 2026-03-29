@@ -98,20 +98,20 @@
       display: flex;
       flex-wrap: wrap;
       justify-content: center;
-      gap: 40px;
-      max-width: 1400px;
+      gap: 35px;
+      max-width: 1600px;
       margin: 0 auto;
     }
 
     .comic {
-      max-width: 620px;
+      max-width: 580px;
       border: 6px solid #00ff9d;
-      box-shadow: 0 0 50px rgba(0, 255, 157, 0.5);
+      box-shadow: 0 0 50px rgba(0, 255, 157, 0.6);
       transition: transform 0.3s;
     }
 
     .comic:hover {
-      transform: scale(1.03);
+      transform: scale(1.04);
     }
 
     .status-bar {
@@ -156,15 +156,16 @@
     </div>
   </div>
 
-  <!-- Comics Section -->
+  <!-- Berserk Comics Section -->
   <div class="comics-section">
-    <h2>MISSION LOGS</h2>
+    <h2>BERSERK PROTOCOL • JEET EXTERMINATION LOGS</h2>
     <div class="comic-container">
-      <!-- Comic 1 -->
-      <img src="https://i.ibb.co/bRm5Y5Vj/image-8.jpg" alt="Top Blaster Comic 1" class="comic">
-
-      <!-- Comic 2 -->
-      <img src="https://i.ibb.co/rRQj106X/image-9.jpg" alt="Top Blaster Comic 2" class="comic">
+      <img src="https://i.ibb.co/k2qFjBxD/image-12.jpg" alt="Top Blaster Berserk Comic 1" class="comic">
+      <img src="https://i.ibb.co/Q7kLVWQT/image-13.jpg" alt="Top Blaster Berserk Comic 2" class="comic">
+      <img src="https://i.ibb.co/1t5xR8Tk/image-14.jpg" alt="Top Blaster Berserk Comic 3" class="comic">
+      <img src="https://i.ibb.co/BHjsG2tN/image-15.jpg" alt="Top Blaster Berserk Comic 4" class="comic">
+      <img src="https://i.ibb.co/MypBTqDw/image-10.jpg" alt="Top Blaster Berserk Comic 5" class="comic">
+      <img src="https://i.ibb.co/pvkb4Ym1/image-11.jpg" alt="Top Blaster Berserk Comic 6" class="comic">
     </div>
   </div>
 
@@ -177,8 +178,7 @@
   </div>
 
   <div class="footer">
-    <p>TOP BLASTER v1.1 • Built for relentless green candle defense</p>
-    <p>Keep the Instant Buy panel open • Never let the jeets win</p>
+    <p>TOP BLASTER v1.2 • Berserk Protocol Active • Never let the jeets win</p>
   </div>
 
   <script>
@@ -186,7 +186,7 @@
       const messages = [
         "🔥 TOP BLAST ACTIVATED!",
         "🌿 GREEN CANDLES DEPLOYED!",
-        "💀 JEETS NEUTRALIZED!",
+        "💀 JEET HORDE NEUTRALIZED!",
         "0.0001 SOL JUST HIT THE CHART!",
         "ALL GREEN CANDLES SECURED!"
       ];
@@ -194,7 +194,6 @@
       const msg = messages[Math.floor(Math.random() * messages.length)];
       alert(msg + "\n\nTop Blaster has spoken.");
       
-      // Flash effect
       document.body.style.transition = "background 0.6s";
       document.body.style.background = "#002211";
       setTimeout(() => document.body.style.background = "#0a0a0a", 700);
