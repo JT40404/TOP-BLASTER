@@ -10,7 +10,6 @@
     * { margin: 0; padding: 0; box-sizing: border-box; }
 
     body {
-      margin: 0;
       background: #0a0a0a;
       color: #00ff9d;
       font-family: 'VT323', monospace;
@@ -21,34 +20,36 @@
     }
 
     .overlay {
-      background: rgba(5, 5, 10, 0.92);
+      background: rgba(8, 8, 12, 0.93);
       min-height: 100vh;
     }
 
-    /* Main Hero Image Section */
+    /* Main Hero Image - placed at the top in foreground */
     .main-hero {
       height: 82vh;
-      background: linear-gradient(rgba(0,0,0,0.75), rgba(0,0,0,0.88)), 
+      background: linear-gradient(rgba(0,0,0,0.65), rgba(0,0,0,0.85)), 
                   url('https://i.imgur.com/xonhOxt.jpeg') center/cover no-repeat;
       display: flex;
       align-items: center;
       justify-content: center;
       text-align: center;
       position: relative;
+      z-index: 5;
+      border-bottom: 6px solid #00ff41;
     }
 
     .main-hero-content {
       max-width: 1000px;
       padding: 20px;
-      z-index: 2;
     }
 
     .main-hero h1 {
       font-family: 'Creepster', cursive;
-      font-size: 5.2rem;
+      font-size: 5.3rem;
       color: #00ff9d;
       text-shadow: 5px 5px 0 #000, -5px -5px 0 #000;
       margin-bottom: 20px;
+      line-height: 1.05;
     }
 
     .main-hero p {
@@ -58,15 +59,15 @@
     }
 
     .header {
-      background: rgba(0,0,0,0.85);
-      padding: 20px 0;
+      background: rgba(0,0,0,0.9);
+      padding: 22px 0;
       text-align: center;
       border-bottom: 4px solid #00ff41;
     }
 
     .title {
       font-family: 'Creepster', cursive;
-      font-size: 3.8rem;
+      font-size: 3.9rem;
       color: #00ff9d;
       text-shadow: 4px 4px 0 #000;
     }
@@ -127,7 +128,7 @@
 
   <div class="overlay">
 
-    <!-- Main Hero Image (your requested image) -->
+    <!-- Main Hero Image (placed at the very top) -->
     <div class="main-hero">
       <div class="main-hero-content">
         <h1>TOP BLASTER</h1>
@@ -141,7 +142,7 @@
       <p class="subtitle">GREEN CANDLE DEFENSE PROTOCOL</p>
     </div>
 
-    <!-- Gallery -->
+    <!-- Gallery Section -->
     <div id="gallery" class="gallery-section">
       <h2>TOP BLASTER ART GALLERY</h2>
       <div class="gallery-grid">
