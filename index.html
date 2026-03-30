@@ -11,86 +11,85 @@
 
     body {
       background: #0a0a0a;
-      color: #ff3366;
+      color: #00ff9d;
       font-family: 'VT323', monospace;
     }
 
     .overlay {
-      background: rgba(10, 5, 8, 0.88);
+      background: rgba(8, 8, 12, 0.94);
       min-height: 100vh;
     }
 
-    .header {
-      background: linear-gradient(to bottom, rgba(0,0,0,0.98), rgba(30,0,0,0.95));
-      border-bottom: 6px solid #cc1122;
-      padding: 35px 0 28px;
-      text-align: center;
-      position: relative;
-      z-index: 10;
-    }
-
-    .title {
-      font-family: 'Creepster', cursive;
-      font-size: 4.5rem;
-      color: #ff3366;
-      text-shadow: 
-        0 0 15px #cc1122,
-        0 0 30px #cc1122,
-        4px 4px 0 #000,
-        -4px -4px 0 #000;
-      letter-spacing: 8px;
-      line-height: 1.05;
-    }
-
-    .subtitle {
-      font-family: 'Press Start 2P', cursive;
-      font-size: 1.65rem;
-      color: #ff6688;
-      text-shadow: 0 0 12px #cc1122;
-      margin-top: 12px;
-      letter-spacing: 4px;
-    }
-
-    .hero {
-      height: 82vh;
-      background: linear-gradient(rgba(0,0,0,0.75), rgba(15,0,0,0.9)), 
+    /* Main Hero Image Section */
+    .main-hero {
+      height: 85vh;
+      background: linear-gradient(rgba(0,0,0,0.65), rgba(0,0,0,0.85)), 
                   url('https://i.imgur.com/xonhOxt.jpeg') center/cover no-repeat;
       display: flex;
       align-items: center;
       justify-content: center;
       text-align: center;
       position: relative;
-      z-index: 5;
-      border-bottom: 8px solid #cc1122;
+      border-bottom: 8px solid #00ff9d;
     }
 
-    .hero-content {
+    .main-hero-content {
       max-width: 1100px;
       padding: 20px;
+      z-index: 2;
     }
 
-    .hero h1 {
+    .main-hero h1 {
       font-family: 'Creepster', cursive;
-      font-size: 5.5rem;
-      margin-bottom: 25px;
-      color: #ff3366;
+      font-size: 5.4rem;
+      color: #00ff9d;
       text-shadow: 
-        0 0 25px #cc1122,
-        0 0 45px #cc1122,
-        8px 8px 0 #000;
-      line-height: 1;
+        0 0 15px #00ff9d,
+        0 0 25px #00ff9d,
+        0 0 40px #00ff9d,
+        3px 3px 0 #000,
+        -3px -3px 0 #000;
+      margin-bottom: 20px;
+      line-height: 1.05;
     }
 
-    .hero p {
-      font-size: 2.15rem;
-      margin-bottom: 40px;
-      text-shadow: 0 0 15px #000;
-      color: #ff99aa;
+    .main-hero p {
+      font-size: 2.1rem;
+      color: #aaffcc;
+      text-shadow: 0 0 12px #000;
+      margin-bottom: 30px;
+    }
+
+    .header {
+      background: linear-gradient(to bottom, rgba(0,0,0,0.95), rgba(20,0,0,0.9));
+      padding: 25px 0;
+      text-align: center;
+      position: relative;
+      z-index: 10;
+      border-bottom: 4px solid #00ff9d;
+    }
+
+    .title {
+      font-family: 'Creepster', cursive;
+      font-size: 3.8rem;
+      color: #00ff9d;
+      text-shadow: 
+        0 0 10px #00ff9d,
+        0 0 20px #00ff9d;
+      letter-spacing: 6px;
+    }
+
+    .subtitle {
+      font-family: 'Press Start 2P', cursive;
+      font-size: 1.55rem;
+      color: #ff6688;
+      text-shadow: 0 0 10px rgba(255, 50, 100, 0.6);
+      margin-top: 8px;
     }
 
     .gallery-section {
       padding: 90px 20px;
-      background: rgba(10, 5, 8, 0.96);
+      background: rgba(8, 8, 12, 0.96);
       text-align: center;
       position: relative;
       z-index: 5;
@@ -98,10 +97,10 @@
 
     .gallery-section h2 {
       font-family: 'Creepster', cursive;
-      font-size: 3.2rem;
+      font-size: 3rem;
       margin-bottom: 50px;
-      color: #ff3366;
-      text-shadow: 0 0 20px #cc1122;
+      color: #00ff9d;
+      text-shadow: 0 0 15px #00ff9d;
     }
 
     .gallery-grid {
@@ -115,41 +114,41 @@
 
     .gallery-img {
       width: 100%;
-      border: 7px solid #cc1122;
-      box-shadow: 0 0 40px rgba(204, 17, 34, 0.6);
+      border: 6px solid #00ff9d;
+      box-shadow: 0 0 30px rgba(0, 255, 157, 0.5);
       transition: all 0.3s;
     }
 
     .gallery-img:hover {
       transform: scale(1.04);
-      box-shadow: 0 0 55px rgba(204, 17, 34, 0.8);
+      box-shadow: 0 0 45px rgba(0, 255, 157, 0.7);
     }
 
     .status-bar {
-      background: rgba(25, 0, 5, 0.95);
-      padding: 50px 20px;
-      font-size: 2.4rem;
+      background: rgba(15, 0, 5, 0.95);
+      padding: 48px 20px;
+      font-size: 2.35rem;
       text-align: center;
-      border-top: 6px solid #cc1122;
-      border-bottom: 6px solid #cc1122;
+      border-top: 5px solid #00ff9d;
+      border-bottom: 5px solid #00ff9d;
       position: relative;
       z-index: 5;
     }
 
     .neon {
-      animation: neon 1.6s infinite alternate;
+      animation: neon 2s infinite alternate;
     }
 
     @keyframes neon {
-      from { text-shadow: 0 0 15px #ff3366; }
-      to { text-shadow: 0 0 30px #ff3366, 0 0 50px #cc1122; }
+      from { text-shadow: 0 0 12px #00ff9d; }
+      to { text-shadow: 0 0 22px #00ff9d, 0 0 35px rgba(255, 50, 80, 0.4); }
     }
 
     .footer {
-      padding: 60px 20px;
+      padding: 55px 20px;
       text-align: center;
       color: #777;
-      font-size: 1.4rem;
+      font-size: 1.35rem;
       position: relative;
       z-index: 5;
     }
@@ -159,17 +158,18 @@
 
   <div class="overlay">
 
+    <!-- New Main Hero Image -->
+    <div class="main-hero">
+      <div class="main-hero-content">
+        <h1>TOP BLASTER</h1>
+        <p>Every buy detected.<br>Every jeet denied.<br>Every green candle secured.</p>
+      </div>
+    </div>
+
+    <!-- Header -->
     <div class="header">
       <h1 class="title">TOP BLASTER</h1>
       <p class="subtitle">GREEN CANDLE DEFENSE PROTOCOL</p>
-    </div>
-
-    <!-- Hero Section with your new main image -->
-    <div class="hero">
-      <div class="hero-content">
-        <h1>TOP BLASTER IS ACTIVE</h1>
-        <p>Every buy detected.<br>Every jeet denied.<br>Every green candle secured.</p>
-      </div>
     </div>
 
     <!-- Gallery Section -->
