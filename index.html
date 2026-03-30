@@ -16,14 +16,14 @@
     }
 
     .overlay {
-      background: rgba(8, 8, 12, 0.95);
+      background: rgba(8, 8, 12, 0.96);
       min-height: 100vh;
     }
 
     .header {
       background: linear-gradient(to bottom, rgba(0,0,0,0.98), rgba(20,0,0,0.95));
       border-bottom: 6px solid #00ff41;
-      padding: 35px 0 25px;
+      padding: 35px 0 28px;
       text-align: center;
       position: relative;
       z-index: 10;
@@ -31,12 +31,12 @@
 
     .title {
       font-family: 'Creepster', cursive;
-      font-size: 4.4rem;
+      font-size: 4.5rem;
       color: #00ff41;
       text-shadow: 
         0 0 15px #00ff41,
         0 0 30px #00ff41,
-        0 0 50px #00ff41,
+        0 0 55px #00ff41,
         5px 5px 0 #000,
         -5px -5px 0 #000;
       letter-spacing: 8px;
@@ -60,7 +60,7 @@
       text-align: center;
       position: relative;
       z-index: 5;
-      background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.85));
+      background: linear-gradient(rgba(0,0,0,0.75), rgba(0,0,0,0.9));
     }
 
     .hero-content {
@@ -70,64 +70,57 @@
 
     .hero h1 {
       font-family: 'Creepster', cursive;
-      font-size: 5.3rem;
+      font-size: 5.4rem;
       margin-bottom: 25px;
       color: #00ff41;
       text-shadow: 
         0 0 25px #00ff41,
         0 0 50px #00ff41,
         7px 7px 0 #000;
+      line-height: 1;
     }
 
     .hero p {
-      font-size: 2.1rem;
+      font-size: 2.15rem;
       margin-bottom: 40px;
       text-shadow: 0 0 15px #000;
       color: #aaffcc;
     }
 
-    .comics-section,
     .gallery-section {
-      padding: 80px 20px;
+      padding: 90px 20px;
       background: rgba(8, 8, 12, 0.96);
       text-align: center;
       position: relative;
       z-index: 5;
     }
 
-    .comics-section h2,
     .gallery-section h2 {
       font-family: 'Creepster', cursive;
-      font-size: 3.1rem;
+      font-size: 3.2rem;
       margin-bottom: 50px;
       color: #00ff41;
       text-shadow: 0 0 20px #00ff41;
     }
 
-    .comic-container,
     .gallery-grid {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 30px;
-      max-width: 1600px;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 25px;
+      max-width: 1400px;
       margin: 0 auto;
       padding: 0 15px;
     }
 
-    .comic,
     .gallery-img {
-      max-width: 100%;
       width: 100%;
-      max-width: 620px;
       border: 7px solid #00ff41;
       box-shadow: 0 0 40px rgba(0, 255, 65, 0.7);
       transition: all 0.3s;
     }
 
-    .comic:hover,
     .gallery-img:hover {
-      transform: scale(1.03);
+      transform: scale(1.04);
       box-shadow: 0 0 60px rgba(0, 255, 65, 0.9);
     }
 
@@ -175,18 +168,6 @@
       <div class="hero-content">
         <h1>TOP BLASTER IS ACTIVE</h1>
         <p>Every buy detected.<br>Every jeet denied.<br>Every green candle secured.</p>
-      </div>
-    </div>
-
-    <!-- Berserk Comics Section -->
-    <div class="comics-section">
-      <h2>BERSERK PROTOCOL • JEET EXTERMINATION LOGS</h2>
-      <div class="comic-container">
-        <img src="https://i.ibb.co/k2qFjBxD/image-12.jpg" alt="Comic 1" class="comic">
-        <img src="https://i.ibb.co/Q7kLVWQT/image-13.jpg" alt="Comic 2" class="comic">
-        <img src="https://i.ibb.co/1t5xR8Tk/image-14.jpg" alt="Comic 3" class="comic">
-        <img src="https://i.ibb.co/BHjsG2tN/image-15.jpg" alt="Comic 4" class="comic">
-        <img src="https://i.ibb.co/MypBTqDw/image-10.jpg" alt="Comic 5" class="comic">
       </div>
     </div>
 
