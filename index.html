@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>TOP BLASTER • Green Candle Defense</title>
   <style>
-    @import url('https://fonts.googleapis.com/css2?family=Creepster&family=VT323&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Creepster&family=VT323&display=swap');
 
     * { margin: 0; padding: 0; box-sizing: border-box; }
 
@@ -13,39 +13,86 @@
       background: #0a0a0a;
       color: #00ff9d;
       font-family: 'VT323', monospace;
-      min-height: 100vh;
     }
 
     .overlay {
-      background: rgba(8, 8, 12, 0.95);
+      background: rgba(8, 8, 12, 0.94);
       min-height: 100vh;
     }
 
-    .header {
-      background: rgba(0,0,0,0.9);
-      padding: 40px 0;
+    /* Main Hero Image Section */
+    .main-hero {
+      height: 85vh;
+      background: linear-gradient(rgba(0,0,0,0.65), rgba(0,0,0,0.85)), 
+                  url('https://i.imgur.com/xonhOxt.jpeg') center/cover no-repeat;
+      display: flex;
+      align-items: center;
+      justify-content: center;
       text-align: center;
-      border-bottom: 6px solid #00ff41;
+      position: relative;
+      border-bottom: 8px solid #00ff9d;
+    }
+
+    .main-hero-content {
+      max-width: 1100px;
+      padding: 20px;
+      z-index: 2;
+    }
+
+    .main-hero h1 {
+      font-family: 'Creepster', cursive;
+      font-size: 5.4rem;
+      color: #00ff9d;
+      text-shadow: 
+        0 0 15px #00ff9d,
+        0 0 25px #00ff9d,
+        0 0 40px #00ff9d,
+        3px 3px 0 #000,
+        -3px -3px 0 #000;
+      margin-bottom: 20px;
+      line-height: 1.05;
+    }
+
+    .main-hero p {
+      font-size: 2.1rem;
+      color: #aaffcc;
+      text-shadow: 0 0 12px #000;
+      margin-bottom: 30px;
+    }
+
+    .header {
+      background: linear-gradient(to bottom, rgba(0,0,0,0.95), rgba(20,0,0,0.9));
+      padding: 25px 0;
+      text-align: center;
+      position: relative;
+      z-index: 10;
+      border-bottom: 4px solid #00ff9d;
     }
 
     .title {
       font-family: 'Creepster', cursive;
-      font-size: 4.8rem;
+      font-size: 3.8rem;
       color: #00ff9d;
-      text-shadow: 5px 5px 0 #000, -5px -5px 0 #000;
+      text-shadow: 
+        0 0 10px #00ff9d,
+        0 0 20px #00ff9d;
+      letter-spacing: 6px;
     }
 
     .subtitle {
       font-family: 'Press Start 2P', cursive;
-      font-size: 1.6rem;
+      font-size: 1.55rem;
       color: #ff6688;
-      margin-top: 12px;
+      text-shadow: 0 0 10px rgba(255, 50, 100, 0.6);
+      margin-top: 8px;
     }
 
     .gallery-section {
-      padding: 80px 20px;
+      padding: 90px 20px;
       background: rgba(8, 8, 12, 0.96);
       text-align: center;
+      position: relative;
+      z-index: 5;
     }
 
     .gallery-section h2 {
@@ -53,6 +100,7 @@
       font-size: 3rem;
       margin-bottom: 50px;
       color: #00ff9d;
+      text-shadow: 0 0 15px #00ff9d;
     }
 
     .gallery-grid {
@@ -67,23 +115,42 @@
     .gallery-img {
       width: 100%;
       border: 6px solid #00ff9d;
-      box-shadow: 0 0 25px rgba(0, 255, 157, 0.4);
+      box-shadow: 0 0 30px rgba(0, 255, 157, 0.5);
+      transition: all 0.3s;
+    }
+
+    .gallery-img:hover {
+      transform: scale(1.04);
+      box-shadow: 0 0 45px rgba(0, 255, 157, 0.7);
     }
 
     .status-bar {
       background: rgba(15, 0, 5, 0.95);
-      padding: 45px 20px;
-      font-size: 2.3rem;
+      padding: 48px 20px;
+      font-size: 2.35rem;
       text-align: center;
       border-top: 5px solid #00ff9d;
       border-bottom: 5px solid #00ff9d;
+      position: relative;
+      z-index: 5;
+    }
+
+    .neon {
+      animation: neon 2s infinite alternate;
+    }
+
+    @keyframes neon {
+      from { text-shadow: 0 0 12px #00ff9d; }
+      to { text-shadow: 0 0 22px #00ff9d, 0 0 35px rgba(255, 50, 80, 0.4); }
     }
 
     .footer {
-      padding: 50px 20px;
+      padding: 55px 20px;
       text-align: center;
       color: #777;
       font-size: 1.35rem;
+      position: relative;
+      z-index: 5;
     }
   </style>
 </head>
@@ -91,13 +158,22 @@
 
   <div class="overlay">
 
+    <!-- New Main Hero Image -->
+    <div class="main-hero">
+      <div class="main-hero-content">
+        <h1>TOP BLASTER</h1>
+        <p>Every buy detected.<br>Every jeet denied.<br>Every green candle secured.</p>
+      </div>
+    </div>
+
+    <!-- Header -->
     <div class="header">
       <h1 class="title">TOP BLASTER</h1>
       <p class="subtitle">GREEN CANDLE DEFENSE PROTOCOL</p>
     </div>
 
     <!-- Gallery Section -->
-    <div class="gallery-section">
+    <div id="gallery" class="gallery-section">
       <h2>TOP BLASTER ART GALLERY</h2>
       <div class="gallery-grid">
         <img src="https://i.imgur.com/iujisDQ.jpeg" alt="Art 1" class="gallery-img">
@@ -113,7 +189,7 @@
 
     <!-- Status Bar -->
     <div class="status-bar">
-      <p>BUY DETECTED, TOPBLAST EXECUTED</p>
+      <p class="neon">BUY DETECTED, TOPBLAST EXECUTED</p>
     </div>
 
     <div class="footer">
