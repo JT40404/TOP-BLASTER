@@ -13,21 +13,17 @@
       background: #0a0a0a;
       color: #00ff9d;
       font-family: 'VT323', monospace;
-      background-image: url('https://i.ibb.co/93ttcKMd/image-5.jpg');
-      background-size: cover;
-      background-position: center;
-      background-attachment: fixed;
     }
 
     .overlay {
-      background: rgba(10, 10, 10, 0.88);
+      background: rgba(8, 8, 12, 0.95);
       min-height: 100vh;
     }
 
     .header {
-      background: linear-gradient(to bottom, rgba(0,0,0,0.95), rgba(26,26,26,0.95));
-      border-bottom: 5px solid #00ff41;
-      padding: 30px 0 25px;
+      background: linear-gradient(to bottom, rgba(0,0,0,0.98), rgba(20,0,0,0.95));
+      border-bottom: 6px solid #00ff41;
+      padding: 35px 0 25px;
       text-align: center;
       position: relative;
       z-index: 10;
@@ -35,25 +31,25 @@
 
     .title {
       font-family: 'Creepster', cursive;
-      font-size: 4.2rem;
+      font-size: 4.4rem;
       color: #00ff41;
       text-shadow: 
-        0 0 10px #00ff41,
-        0 0 20px #00ff41,
-        0 0 40px #00ff41,
-        4px 4px 0 #000,
-        -4px -4px 0 #000;
-      letter-spacing: 6px;
-      line-height: 1.1;
+        0 0 15px #00ff41,
+        0 0 30px #00ff41,
+        0 0 50px #00ff41,
+        5px 5px 0 #000,
+        -5px -5px 0 #000;
+      letter-spacing: 8px;
+      line-height: 1.05;
     }
 
     .subtitle {
       font-family: 'Press Start 2P', cursive;
-      font-size: 1.6rem;
+      font-size: 1.65rem;
       color: #ff0044;
       text-shadow: 0 0 15px #ff0044;
-      margin-top: 10px;
-      letter-spacing: 3px;
+      margin-top: 12px;
+      letter-spacing: 4px;
     }
 
     .hero {
@@ -64,6 +60,7 @@
       text-align: center;
       position: relative;
       z-index: 5;
+      background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.85));
     }
 
     .hero-content {
@@ -73,14 +70,13 @@
 
     .hero h1 {
       font-family: 'Creepster', cursive;
-      font-size: 5.2rem;
-      margin-bottom: 20px;
+      font-size: 5.3rem;
+      margin-bottom: 25px;
       color: #00ff41;
       text-shadow: 
-        0 0 20px #00ff41,
-        0 0 40px #00ff41,
-        6px 6px 0 #000;
-      line-height: 1;
+        0 0 25px #00ff41,
+        0 0 50px #00ff41,
+        7px 7px 0 #000;
     }
 
     .hero p {
@@ -92,7 +88,7 @@
 
     .comics-section,
     .gallery-section {
-      padding: 85px 20px;
+      padding: 80px 20px;
       background: rgba(8, 8, 12, 0.96);
       text-align: center;
       position: relative;
@@ -102,7 +98,7 @@
     .comics-section h2,
     .gallery-section h2 {
       font-family: 'Creepster', cursive;
-      font-size: 3.2rem;
+      font-size: 3.1rem;
       margin-bottom: 50px;
       color: #00ff41;
       text-shadow: 0 0 20px #00ff41;
@@ -113,14 +109,17 @@
       display: flex;
       flex-wrap: wrap;
       justify-content: center;
-      gap: 35px;
+      gap: 30px;
       max-width: 1600px;
       margin: 0 auto;
+      padding: 0 15px;
     }
 
     .comic,
     .gallery-img {
-      max-width: 580px;
+      max-width: 100%;
+      width: 100%;
+      max-width: 620px;
       border: 7px solid #00ff41;
       box-shadow: 0 0 40px rgba(0, 255, 65, 0.7);
       transition: all 0.3s;
@@ -128,7 +127,7 @@
 
     .comic:hover,
     .gallery-img:hover {
-      transform: scale(1.04) rotate(1deg);
+      transform: scale(1.03);
       box-shadow: 0 0 60px rgba(0, 255, 65, 0.9);
     }
 
@@ -149,13 +148,13 @@
 
     @keyframes neon {
       from { text-shadow: 0 0 15px #00ff41; }
-      to { text-shadow: 0 0 30px #00ff41, 0 0 60px #00ff41; }
+      to { text-shadow: 0 0 35px #00ff41, 0 0 65px #00ff41; }
     }
 
     .footer {
       padding: 60px 20px;
       text-align: center;
-      color: #666;
+      color: #777;
       font-size: 1.4rem;
       position: relative;
       z-index: 5;
